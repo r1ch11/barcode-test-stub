@@ -141,7 +141,6 @@ public final class KeyboardSendInputHelper {
      *              case in the target window.
      */
     private void writeText(final int[] scanCodes, final char[] chars) {
-        Objects.requireNonNull(hwnd, "Window handle cannot be null");
         Objects.requireNonNull(scanCodes,
                 "Scan Codes Array handle cannot be null");
         Objects.requireNonNull(chars, "Chars Array cannot be null");
@@ -186,7 +185,6 @@ public final class KeyboardSendInputHelper {
      * @param text text to write to window.
      */
     public void writeText(final String text) {
-        Objects.requireNonNull(hwnd, "Window handle cannot be null");
         char[] chars = text.toCharArray();
         IntStream intStream = text.chars();
         int[] scanCodes = intStream.map(
