@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/alf/.m2/repository/net/java/dev/jna/jna-platform/5.3.1/jna-platform-5.3.1.jar;C:/Users/alf/.m2/repository/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/alf/IdeaProjects/stub/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2019. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/alf/IdeaProjects/stub/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'barcode-scanner-stub 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/alf/IdeaProjects/stub/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'barcode-scanner-stub 1.0-SNAPSHOT API'
