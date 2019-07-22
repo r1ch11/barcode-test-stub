@@ -65,7 +65,7 @@ public final class KeyboardSendInputHelper {
 
     /**
      * Should set focus to the window with the given name.
-     * TODO - does not always work
+     * This will not work if the target window is minimized.
      * @param windowName example: "Untitled - Notepad"
      * @return window handle for the window with the given name.
      */
