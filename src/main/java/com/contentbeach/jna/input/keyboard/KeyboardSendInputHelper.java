@@ -156,13 +156,11 @@ public final class KeyboardSendInputHelper {
             inputList.addAll(createInputs(scanCodes[i],
                     Character.isUpperCase(chars[i])));
         }
-
-        // Important! Need to create array structure with contiguous memory
+        
         WinUser.INPUT[] inputArray =
                 (WinUser.INPUT[]) new WinUser.INPUT().toArray(
-                        inputList.size());
+                        inputList.size());        
 
-        // Load contiguous array
         for (int i = 0; i < inputList.size(); i++) {
             WinUser.INPUT input = inputList.get(i);
             inputArray[i].type = new WinDef.DWORD(WinUser.INPUT.INPUT_KEYBOARD);
