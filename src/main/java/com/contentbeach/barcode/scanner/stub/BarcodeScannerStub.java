@@ -26,12 +26,10 @@ public final class BarcodeScannerStub {
      * <p>
      *     Usage:
      * </p>
-     * <p>
      *     <ul>
      *         <li><code>args[0]</code> - Window title</li>
      *         <li><code>args[1]</code> - barcode</li>
      *     </ul>
-     * </p>
      * @param args must include the window title and barcode.
      */
     public static void main(final String[] args) {
