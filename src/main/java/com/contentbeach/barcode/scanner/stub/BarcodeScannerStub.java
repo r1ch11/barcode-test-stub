@@ -36,6 +36,7 @@ public final class BarcodeScannerStub {
 
         if (args.length != 2) {
             System.err.println("Windows title and barcode are required.");
+            System.exit(1);
         }
 
         String windowName = args[0];
