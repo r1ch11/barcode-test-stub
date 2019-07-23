@@ -5,6 +5,7 @@ import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.platform.win32.WinDef.HWND;
 import com.sun.jna.platform.win32.WinUser;
+import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,6 +79,12 @@ public final class KeyboardSendInputHelper {
 
     /**
      * Helper method to create a single input for a key down or key up event.
+     * <p>
+     *     This only sets <code>input.ki.dwFlags</code>
+     *     and <code>input.ki.wScan</code> since this is
+     *     just being used as a DTO for the <code>dwFlags</code>
+     *     and <code>wScan</code> values.
+     * </p>
      * @param scanCode Scan code that represents either a character or the
      *                 shift key.
      * @param dwFlags Flags for key down or key up.
@@ -87,11 +94,8 @@ public final class KeyboardSendInputHelper {
     private WinUser.INPUT createInput(final int scanCode,
                                       final WinDef.DWORD dwFlags) {
         WinUser.INPUT input = new WinUser.INPUT();
-        input.type = new WinDef.DWORD(WinUser.INPUT.INPUT_KEYBOARD);
-        input.input.setType("ki");
-        input.input.ki.time = new WinDef.DWORD(0);
-        input.input.ki.wVk  = new WinDef.WORD(0); //using scancodes instead
-        input.input.ki.dwExtraInfo = new BaseTSD.ULONG_PTR(0);
+        // Other inputs are not needed.
+        // TODO - should a Pair be used instead?
         input.input.ki.dwFlags = dwFlags;
         input.input.ki.wScan = new WinDef.WORD(scanCode);
         return input;
